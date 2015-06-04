@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/*import google font - Source Pro + PT Serif*/
+// @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|PT+Serif);
+
+
+// Font families
+$font-family-body: 'PT Serif', serif;
+$font-family-title: 'Source Sans Pro', sans-serif;
+
+$bold-font: 700;
+
+
+// The base font-size, all other elements will adjust to this value
+$font-size-base: 1rem;
+$font-size-small: .8rem;

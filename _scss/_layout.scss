@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Page layout
+   ========================================================================== */
+
+html {
+   font-family: $font-family-body;
+   font-size: $font-size-base;
+   line-height: $line-height-base;
+   color: $body-text-color;
+}
+
+html,
+body {
+   height: $percentages-100;
+}
+
+body.page {
+  text-rendering: optimizeLegibility;
+  color: $body-text-color;
+  font-family: $font-family-body;
+}
+

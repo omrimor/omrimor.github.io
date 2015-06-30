@@ -9,14 +9,14 @@ html {
    color: $body-text-color;
 }
 
-html,
-body {
-   height: $percentages-100;
-}
-
 body.page {
   text-rendering: optimizeLegibility;
   color: $body-text-color;
   font-family: $font-family-body;
+
+    @media screen and (max-width: $breakpoint-phone) {
+    	font-size: 13px;
+    }
+
 }
 

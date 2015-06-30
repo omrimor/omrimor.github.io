@@ -1,9 +1,21 @@
 {% include header.html %}
 
-<h1>{{ page.title }}</h1>
-<p>{{ page.date | date_to_long_string }}</p>
+<div class="article-title">
+	<h1 class="title-singlePage">{{ page.title }}</h1>
+	<span class="meta-singlePage">
+		<a href="/" title="Home">← Home</a>
+		{{ page.date | date: '%B %Y' }}
+	</span>
+</div>
 
-{{ content }}
+
+<div class="article">
+	<div class="inner">
+		{{ content }}
+		<hr>
+		<a href="/" class="btn">Home</a>
+	</div>
+</div>
 
 {% include footer.html %}
 

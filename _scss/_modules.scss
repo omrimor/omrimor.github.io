@@ -9,6 +9,11 @@
  max-width: 40em;
  padding-left: 17em;
 
+ @media screen and (min-width: $breakpoint-desktop) {
+    padding-left: 13em;
+    max-width: 36em;
+ }
+
  @media screen and (max-width: $breakpoint-tablet) {
     padding-left: 0;
     max-width: 18em;
@@ -32,6 +37,13 @@
         left: 0;
         max-width: 100%;
         margin-bottom: 2em;
+
+        @media screen and (min-width: $breakpoint-desktop) {
+            // top: .7em;
+            left: 2em;
+
+        }
+
 
         @media screen and (max-width: $breakpoint-tablet) {
             position: static;
@@ -69,7 +81,7 @@ h2 {
 
 h3 {
     font-size: 1.375em;
-    margin-bottom: .5em;
+    margin: 0;
 
     @media screen and (max-width: $breakpoint-phone) {
         text-align: center;
@@ -85,7 +97,7 @@ h3 {
 
     & a {
         font-family: $font-family-title;
-        font-size: $font-size-base + .25;
+        font-size: 1.375em;
         font-weight: 700;
         color: inherit;
         text-decoration: none;
@@ -97,7 +109,7 @@ h3 {
 
     & .meta {
         display: block;
-        font-size: $font-size-small;
+        font-size: .8em;
         margin-bottom: 1em;
     }
 
@@ -113,6 +125,10 @@ h3 {
         position: absolute;
         left: 0;
 
+        @media screen and (min-width: $breakpoint-desktop) {
+            left: 2em;
+        }
+
         @media screen and (max-width: $breakpoint-tablet) {
             position: static;
             display: block;
@@ -122,15 +138,9 @@ h3 {
     }
 
     & a {
-        font-size: $font-size-small + .2;
+        font-size: 1em;
         font-weight: 400;
         border-bottom: 1px solid #333;
-    }
-
-    & h3 {
-        font-size: $font-size-base + .25;
-        margin-top: 0;
-        margin-bottom: .1em;
     }
 }
 
@@ -146,9 +156,9 @@ h3 {
 
     & .meta-singlePage {
         position: relative;
-        bottom: 12px;
+        // bottom: 12px;
         display: block;
-        font-size: $font-size-small;
+        font-size: 14px;
 
         & a {
             margin-right: .5em;
@@ -205,7 +215,6 @@ h3 {
         text-align: left;
         line-height: 1.8em;
         margin-bottom: 3em;
-        font-size: 20px;
 
         @media screen and (max-width: $breakpoint-phone) {
             font-size: 16px;
@@ -249,18 +258,16 @@ h3 {
     & .caption {
         max-width: 350px;
         font-family: $font-family-title;
-        font-size: $font-size-small;
+        font-size: .6em;
         margin: -4em auto 8em auto;
 
         @media screen and (max-width: $breakpoint-phone) {
             margin-top: 0;
         }
-
     }
 
     & .multiple-caption {
         display: block;
-        margin-top: 1.5em;
     }
 
     & video.last-in-row {
@@ -282,27 +289,19 @@ h3 {
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    padding-bottom: 5em;
+    margin-bottom: 5em;
     margin-top: 5em;
     -webkit-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
     opacity: 0.4;
+    font-size: .8em;
 
     &:hover {
         opacity: 1;
     }
 
-    & ul {
-        padding: 0px;
-        width: 100%;
-        display: inline-block;
-        text-align: center;
-        overflow: hidden;
-    }
-
     & li {
-        padding: 0 6px;
-        width: 76px;
+        margin: 0 .5em;
         display:inline-block;
     }
 
@@ -319,16 +318,12 @@ h3 {
           height: 2px;
           bottom: 0;
           left: 0;
-          background-color: #000;
-          -webkit-transform: scaleY(1);
-          transform: scaleY(1);
           -webkit-transition: all 0.3s ease-in-out 0s;
           transition: all 0.3s ease-in-out 0s;
         }
 
         &:hover:before {
-            -webkit-transform: scaleY(30);
-            transform: scaleY(30);
+            height: 100%;
         }
     }
 
@@ -377,7 +372,6 @@ h3 {
 
 .bio {
     color: #333;
-    font-size: $font-size-base;
 
     & a {
         color: inherit;

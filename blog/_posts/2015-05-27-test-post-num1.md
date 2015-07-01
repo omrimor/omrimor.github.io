@@ -1,6 +1,5 @@
 ---
 title: Lorem Ipsum Dolor Sit Amet
-permalink: /:title
 layout: post
 ---
 

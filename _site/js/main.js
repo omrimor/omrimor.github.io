@@ -1,26 +1,29 @@
 $(function(){
 	'use strict';
 
-	// var ul = $('#code ul');
-	// ul.html('this is new');
-	// console.log(ul);
+	 var chooseColor = function(){
+		var pathArray = window.location.pathname.split('/'),
+			category = pathArray[1],
+			colorHex = '';
+		if(category === 'blog'){
+			console.log(category);
+			colorHex = '#f1c40f';
+		}
+		else if(category === 'work'){
+			console.log(category);
+			colorHex = '#2ecc71';
 
-	// var docfrag = document.createDocumentFragment();
-	// var li = document.createElement('li');
+		} else {
+			colorHex = '#34495e';
+		}
+		return colorHex;
+	};
+
+	$('.strip').css('background-color', chooseColor());
 
 	$.get('https://api.github.com/users/omrimor/repos')
 	  .done(function(data) {
-	  	// console.log(data.length);
-	  	console.log(data);
-
 	  	buildList(data);
-
-	  	// $.each(data, function(inx, item){
-	  	// 	// console.log(inx, item);
-	  	// 	console.log(item.name, item.html_url);
-
-	  	// });
-
 	 });
 
 
@@ -28,13 +31,10 @@ $(function(){
 		var ul = $('#code ul'),
 	 		docfrag = document.createDocumentFragment();
 
-
 	 	if(obj){
 		 	$.each(obj, function(inx, item){
 			 	var li = document.createElement('li');
-			 	// var link = document.createElement('a');
 			 	var linkTitle = document.createElement('a');
-			 	// var title = document.createElement('h3');
 
 			 	if(item.name === 'omrimor.github.io' || item.name === 'ui-person' ||
 			 		item.name === 'exercises'){
@@ -51,19 +51,11 @@ $(function(){
 
 			 		li.appendChild(linkTitle);
 			 		docfrag.appendChild(li);
-
-			 		console.log(linkTitle);
 			 	}
 
 		 	});
 		 	ul.append(docfrag);
-
-
 	 	}
-
-
-
-
 	 };
 
 

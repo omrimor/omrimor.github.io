@@ -2,7 +2,18 @@ $(function(){
 	'use strict';
 
 	// Define helper functions
-	//
+	// -----------------------
+
+	// Get current media query
+	// If matches to smallest (478px) - change text of multi-image captions
+	var handleMediaChange = function (mediaQueryList) {
+	    if (mediaQueryList.matches) {
+			$('.multiple-caption').each(function(){
+				var str = $(this).text();
+				$(this).text(str.replace('From left to right', 'From top to bottom'));
+			});
+	    }
+	};
 
 	// Choose what color to show in header
 	// strip based on current category
@@ -13,11 +24,9 @@ $(function(){
 			colorHex = '';
 		// Based on category - assign color
 		if(category === 'blog'){
-			console.log(category);
 			colorHex = '#f1c40f';
 		}
 		else if(category === 'work'){
-			console.log(category);
 			colorHex = '#2ecc71';
 
 		} else {
@@ -53,7 +62,7 @@ $(function(){
 			 		linkTitle.innerHTML = item.name;
 			 		linkTitle.setAttribute('target', 'blank');
 
-					// If the repo is blogapp - go to the Heruko project
+					// If the repo is blogapp - go to the Heruko project URL
 			 		if(item.name === 'blogapp'){
 			 			linkTitle.href = 'http://omrimor-blogapp.herokuapp.com/';
 			 		} else {
@@ -65,9 +74,16 @@ $(function(){
 			 	}
 
 		 	});
+
 		 	ul.append(docfrag);
 	 	}
 	 };
 
+	 // Define the mq to listen to
+	var mql = window.matchMedia('screen and (max-width: 478px)');
+
+	// Add listener to that mq
+	mql.addListener(handleMediaChange);
+	handleMediaChange(mql);
 
 });

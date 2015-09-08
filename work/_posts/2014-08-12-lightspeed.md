@@ -2,7 +2,6 @@
 title: Lightspeed
 desc: SasS service for creating and managing mobile ad campaigns
 lead-image: [../images/lightspeed/lightspeed.png]
-permalink: /:categories/:title
 layout: post
 ---
 <div class="images">

@@ -1,34 +1,36 @@
 ---
 title: Lightspeed
-desc: Sass service for creating and managing mobile ad campaigns
+desc: SasS service for creating and managing mobile ad campaigns
 lead-image: [../images/lightspeed/lightspeed.png]
+permalink: /:categories/:title
 layout: post
 ---
 <div class="images">
 	<figure><img src="/images/lightspeed/main.png" alt="Lightspeed"></figure>
 </div>
 
-Lightspeed is a SaaS application for creating and managing mobile ad campaigns from a veriaty of services.
-It is a one-stop app-promotion shop, giving all the control in the hands of the user.
+Lightspeed is a SaaS application for creating and managing mobile advertising campaigns
+from a variety of traffic sources.
+Our goal was to create a single, simplifed interface, keeping the user focused on getting quality users.
 
 The world of mobile advertising was new to me. I had no idea of the level of complexity involved in such a system
 and the challenges ahead.
 
-The service is still running in closed beta so i can't share all the screens I wished, but i promise to update once possible.
-
 ###Research
 
-We had about two months of research. Studing the competitors, and familierizing ourselfs with how the eco-system works, from
-how the servers are working to how the final ad is being served to the users. We had a lot of meetings with our own marketing teams
-to understand their needs, pain points with existing solutions and observing them working hands on.
+Perion already had a SEM department (Search engine marketing), and we had great access to
+users using systems in the market we were going to disrupt.
+We held user interviews with them, "shadowed" them at their desk to find pain points they have
+with existing solutions and gathered them to a session of card sorting exercises to help us establish
+a solid structure for the app's information architecture.
 
-Lightspeed was designed to support creating "regular" campaings, along with RTB (Real Time Bidding) and social (Facebook, Twitter) campaigns.
-One of the big challanges was creating a familiar experience as possible while being flexible enough to each platform needs.
+Meanwhile, I was studing the competitors, familiarizing myself with how the mobile
+advertising eco-system works. I needed to know the funnel so I can better
+communicate with the advanced users who use these systems.
 
-The IA was laid out and structured, but we designed and optimized for a "context navigation" user flow. A user can look at a campaign performence dashboard, click on an entry they wish to further investigate and navigate away to different sections of the service seamlessly while still keeping the main navigation sidebar accessable at any page.
-
-To somehow summerize the research phase, I created a glossary to help expand the team knowledge in the mobile marketing world and
-help bring everybody involved on board.
+To somehow summerize the research phase, and as a way to share the design team's work,
+ I created a glossary web page to help expand the team knowledge in the mobile marketing
+world and help bring everybody involved on board.
 
 <div class="images">
 	<figure>
@@ -37,17 +39,11 @@ help bring everybody involved on board.
 	</figure>
 </div>
 
-###Dashboard
+###Structure
 
-The main entry point of the service is the user's dashboard.
-The challenge was to create a glence view of a user's current running campaigns and their performance while keeping the data easy
-to consume with a clear visual hirerchey.
-
-The solution we came up with was dividing the dashboard into clear sections. The top section showed the current level of hirerechy of the user's account - from the top level account to a single campaign, along with pre defined time frames, to produce clear KPI's that a user can quickly get a digest of
-his status.
-
-We came up with a "spotlight" section - user could see his/hers top ranking campaigns and creatives, giving him the ability to quickly act upon
-specific "good" / "bad" campaigns and compare them agianst others.
+There are two "modes" to the service - data consumption mode and data creation mode.
+Under consumption we have the dashboard and the reports section, under data creation
+we have the campaign builder wizard.
 
 <div class="images">
 	<figure>
@@ -56,29 +52,44 @@ specific "good" / "bad" campaigns and compare them agianst others.
 	</figure>
 </div>
 
-###Creating a campaign
+The main entry point of the service is the dashboard. One of the challenges was to create a
+glance view of current running campaigns filled with important information while keeping
+the data easy to consume with a clear visual hierarchy. A unique feature is the "spotlight"
+ - top five ranking campaigns and creatives, giving a user the ability to quickly act upon
+specific "good" / "bad" campaigns and compare them against others.
 
-One side of the service is consuming data - viewing reports and performance analyitics, the other side is creating new data - uploading
-a new campaign to the service.
+<div class="images">
+	<figure><img src="/images/lightspeed/dashboard.png" alt="Lightspeed"></figure>
+	<figcaption class="caption">Lightbox Dashboard view</figcaption>
+</div>
 
-The amount of input needed to create a new campaign can be overwelming. Since one of the two main personas who use the service is not a marketing expert,
-we needed to break down the wizard into logical sections, to keep the focus on small tasks, that will accumolate together for submission.
+The amount of input needed to create a new campaign can be overwhelming.
+We needed to break down the wizard into logical sections to keep the user focused
+and help him complete small tasks. The wizard is made up of six sections,
+ each one building on top of the previous one in a logical order,
+ from basic setup to placing the bid for each ad in the campaign.
 
-The wizard we created is made up of 6-7 sections, each one building on top of the previous one in a logical order: basic setup -> choosing the traffic sources -> uploading the creatives -> placing a bid for each campaign -> summary review & submission.
+The service has a learning algorithm that populated certain parts of the inputs based on
+previous user campaigns and a collective suggestion engine from other users running similar
+campaigns in that category. The user is left with adding a minimal amount of input,
+making it very easy and intuitive to create a new campaign or duplicating an existing one.
 
-Each section was designed to be with the least amount of friction. The service has a learning algorithem that is used to populate certain parts of the
-wizard based on previous campaigns and a collective suggestion engine from other users running similar campaigns in that category. The user is left with
-adding a minimal amount of input, making it very easy and intuative to create a new campaign, or duplicating an existing one.
+<div class="images">
+	<figure><img src="/images/lightspeed/wizard.png" alt="Lightspeed"></figure>
+	<figcaption class="caption">Traffic sources tab in the campaign wizard</figcaption>
+</div>
 
-###Delight factor
+###Team play
 
-Working in an agile team means being very communative and open with the PM's & DEV team. We had daily stand up meetings to make sure everybody's
-on track and to ensure that the design was delivered on time and updates made to UX docs and design assets were synced and the whole team is refrensing
-the right point.
+Working in an agile team means being very commutative and open with the PM's & DEV team.
+In addition to daily stand-up meetings, I had to make sure everybody's on track and ensure
+dev teams across departments had all the assets needed. I opt for a "single source of truth" -
+one location to reference all stackholders.
 
-To help with syncing the team, we created a repository of the UI & GUI assets. I've build 2 simple web pages with a simple JSON as a data base, which
-I kept updating, so that each DEV working on a feature, could visit the URL, find the feature name and see all UI docs and graphic assets relevant to him.
-It worked very well. All stackholders could always see the latest iteration and it helped reduce mis-communication and shorten delivery times.
+I've build two web pages with a JSON as a data base which I kept updating.
+All you had to do to get a feature's spec or to find the latest design iteration was
+to type its name in the search field. It worked very well. Miscommunication was reduced to
+a minimum and delivery times shorten.
 
 <div class="images">
 	<figure>
@@ -88,3 +99,10 @@ It worked very well. All stackholders could always see the latest iteration and 
 </div>
 
 ###Closing
+
+Since I left Perion in 2014, "Lightspeed" came out of private beta and the product's name
+changed to "GrowMobile".
+
+The UI got a fresh coat of paint and facelift to go along with a new brand but designs shown here
+still hold true in concept and experience. I'm excited to see how the product will evolve
+in the future and i'm sure will have a strong impact in the mobile advertising world.

@@ -111,7 +111,7 @@ h3 {
     }
 
     & p {
-        margin-bottom: .5em;
+        margin-bottom: .2em;
     }
 }
 
@@ -137,6 +137,12 @@ h3 {
         font-size: .8em;
         font-weight: 400;
         border-bottom: 1px solid #333;
+
+        @media screen and (max-width: $breakpoint-phone) {
+            font-size: 1em;
+
+        }
+
     }
 }
 
@@ -329,10 +335,18 @@ h3 {
     display: inline-block;
     padding-top: 15px;
 
+    @media screen and (max-width: $breakpoint-phone) {
+        font-size: 1.5em;
+    }
+
     & li {
         display: inline-block;
         float: left;
         margin-left: 15px;
+
+        @media screen and (max-width: $breakpoint-phone) {
+            margin-left: 25px;
+        }
 
         &:first-child {
             margin-left: 0;

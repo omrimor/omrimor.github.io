@@ -1,7 +1,9 @@
 ---
 title: Lightspeed
-desc: SasS service for creating and managing mobile ad campaigns
+permalink: Lightspeed
+desc: SasS web application for creating and managing mobile ad campaigns
 lead-image: [../images/lightspeed/lightspeed.png]
+website: http://www.growmobile.com
 layout: post
 ---
 <div class="images">

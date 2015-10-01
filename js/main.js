@@ -6,6 +6,7 @@ $(function(){
 
 	// Get current media query
 	// If matches to smallest (478px) - change text of multi-image captions
+	// --------------------------------------------------------------------
 	var handleMediaChange = function (mediaQueryList) {
 	    if (mediaQueryList.matches) {
 			$('.multiple-caption').each(function(){
@@ -13,29 +14,13 @@ $(function(){
 				$(this).text(str.replace('From left to right', 'From top to bottom'));
 			});
 	    }
+	    else {
+	    	$('.multiple-caption').each(function(){
+	    		var str = $(this).text();
+	    		$(this).text(str.replace('From top to bottom', 'From left to right'));
+	    	});
+	    }
 	};
-
-	// Choose what color to show in header
-	// strip based on current category
-	 var chooseColor = function(){
-	 	// Create array from URL and pull the category
-		var pathArray = window.location.pathname.split('/'),
-			category = pathArray[1],
-			colorHex = '';
-		// Based on category - assign color
-		if(category === 'blog'){
-			colorHex = '#f1c40f';
-		}
-		else if(category === 'work'){
-			colorHex = '#2ecc71';
-
-		} else {
-			colorHex = '#34495e';
-		}
-		return colorHex;
-	};
-
-	$('.strip').css('background-color', chooseColor());
 
 	// Get my repos from github API
 	$.get('https://api.github.com/users/omrimor/repos')

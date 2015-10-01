@@ -34,7 +34,7 @@
 
 
 #me {
-    margin-top: 5em;
+    margin-top: 12em;
     margin-bottom: 3em;
 
     & img {
@@ -56,6 +56,10 @@
     }
 }
 
+#work {
+    margin-top: 6em;
+}
+
 .clip-circle {
     overflow: hidden;
     -webkit-border-radius: 50%;
@@ -65,6 +69,8 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $font-family-title;
+    font-weight: $bold-font;
+    letter-spacing: -0.0625em;
     text-align: left;
 }
 
@@ -108,7 +114,12 @@ h3 {
         display: block;
         font-size: .8em;
         margin-bottom: 1em;
+
+        &:after {
+            content: "-";
+        }
     }
+
 
     & p {
         margin-bottom: .2em;
@@ -137,12 +148,12 @@ h3 {
         font-size: .8em;
         font-weight: 400;
         border-bottom: 1px solid #333;
+        padding-bottom: .3em;
+        margin-right: .6em;
 
         @media screen and (max-width: $breakpoint-phone) {
             font-size: 1em;
-
         }
-
     }
 }
 
@@ -158,13 +169,15 @@ h3 {
 
     & .meta-singlePage {
         position: relative;
-        // bottom: 12px;
-        display: block;
+        font-family: $font-family-title;
+        font-weight: $regular-font;
         font-size: 14px;
+        display: block;
 
         & a {
             margin-right: .5em;
             color: inherit;
+            padding-bottom: .3em;
         }
 
         & a:hover {
@@ -207,8 +220,10 @@ h3 {
     }
 
     h3 {
-        font-size: 1.375em;
-        margin-bottom: .5em;
+        font-size: 2em;
+        margin-bottom: 1.5em;
+        margin-top: 4.5em;
+        text-align: left;
     }
 
     & p {
@@ -245,7 +260,7 @@ h3 {
     }
 
     & img {
-        max-width: 96%;
+        max-width: 98%;
         margin: 1em auto 4em auto;
     }
 
@@ -258,6 +273,10 @@ h3 {
         margin: 1em .5em 2.5em .5em;
     }
 
+    .screen video {
+        margin: 0;
+    }
+
     & .caption {
         max-width: 350px;
         font-family: $font-family-title;
@@ -266,11 +285,13 @@ h3 {
 
         @media screen and (max-width: $breakpoint-phone) {
             margin-top: 0;
+            font-size: .75em;
         }
     }
 
     & .multiple-caption {
         display: block;
+        margin-top: .1em;
     }
 
     & video.last-in-row {
@@ -303,6 +324,7 @@ h3 {
 .btn {
     display: block;
     margin: 0 auto;
+    margin-bottom: 1.4em;
     padding: 2.13em 1.6667em 2em;
     max-width: 290px;
     font-size: 15px;

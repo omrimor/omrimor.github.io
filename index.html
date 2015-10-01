@@ -54,6 +54,9 @@ layout: home
                 <span class="meta">{{post.date | date: '%Y'}}</span>
                 <p>{{ post.desc }}</p>
                 <a href="{{ post.url }}">Read Case Study</a>
+                {% if post.website %}
+                  <a href="{{ post.website}}" target="_blank">Visit Site</a>
+                {% endif %}
               </li>
           {% endfor %}
       </ul>

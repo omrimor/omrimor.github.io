@@ -3,7 +3,7 @@
 <div class="article-title">
 	<h1 class="title-singlePage">{{ page.title }}</h1>
 	<span class="meta-singlePage">
-		<a href="/" title="Home">← Home</a>
+		<a href="/" title="Home">&larr; Home</a>
 		{{ page.date | date: '%B %Y' }}
 	</span>
 </div>
@@ -13,13 +13,30 @@
 	<div class="inner">
 		{{ content }}
 		<hr>
-		<a href="/" class="btn">Home</a>
+		{% if page.previous.url %}
+		    <a class="btn" href="{{page.previous.url}}">&larr; {{page.previous.title}}</a>
+		{% endif %}
+		{% if page.next.url %}
+			<a class="btn" href="{{page.next.url}}">{{page.next.title}} &rarr;</a>
+		{% endif %}
 	</div>
 </div>
 
-{% include footer.html %}
+{% include footer-post.html %}
 
 
 
+<!--
+If I choose to use _posts in blog - enable it again and move above
+
+{% capture related_posts %}{{ page.categories }}{% endcapture %}
+{% assign collection = site.categories[related_posts] %}
+{% for article in collection %}
+     {% unless page.url == article.url %}
+     <a class="prev" href="{{article.url}}">&laquo; {{article.title}}</a>
+     {{ article.title }} - {{ category | capitalize }}<br/>
+     {% endunless %}
+{% endfor %}
+-->
 
 

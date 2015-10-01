@@ -13,12 +13,12 @@ body.page {
   font-size: $font-size-base;
   line-height: $line-height-base;
   color: $body-text-color;
+  font-weight: $light-font;
 
   @media screen and (min-width: $breakpoint-desktop) {
   	font-size: 28px;
   	line-height: 1.6;
   }
-
 
   @media screen and (max-width: $breakpoint-phone) {
 	font-size: 16px;

@@ -26,17 +26,21 @@ That's the momentum our product team needed to move it from the backlog into wor
 
 After discussing the feature with our PM, we set some goals: 
 
-* Know your colleagues arrival/departure time at/from the destination
-* Know which hotel your colleagues have booked
-* Get alerts when a colleague is delayed
+**Know your colleagues arrival/departure time at/from the destination**
+
+**Know which hotel your colleagues have booked**
+
+**Get alerts when a colleague is delayed**
 
 From a product stand point, Team Travel looked like a winner:
 
-* Improve user engagement - Users that are part of a Team Travel,
+**Improve user engagement** - Users that are part of a Team Travel,
 will return to the app more often
-* Drive new users - Users who start Team Travel will invite non WorldMate users
+
+**Drive new users** - Users who start Team Travel will invite non WorldMate users
 to join them in trip
-* Demonstrate innovation - Team Travel will lead to PR buzz on social,
+
+**Demonstrate innovation** - Team Travel will lead to PR buzz on social,
 travel analysts and tech media outlets
 
 <div class="images">

@@ -13,3 +13,5 @@ exclude: [node_modules, Gruntfile.js, package.json, README.md, .gitignore, .jshi
 sass:
   sass_dir: _scss
   style: :compressed
+
+gems: [jekyll-paginate]

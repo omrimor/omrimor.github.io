@@ -226,6 +226,10 @@ h3 {
         text-align: left;
     }
 
+    h4 {
+        margin-bottom: .5em;
+    }
+
     & p {
         position: relative;
         margin: 0 auto;
@@ -233,6 +237,25 @@ h3 {
         text-align: left;
         line-height: 1.8em;
         margin-bottom: 2em;
+
+        @media screen and (max-width: $breakpoint-phone) {
+            font-size: 16px;
+        }
+    }
+
+    & ul {
+        position: relative;
+        margin: 0 auto;
+        max-width: 600px;
+        text-align: left;
+        line-height: 1.8em;
+        margin-bottom: 2em;
+        list-style-type: disc;
+        padding: 0;
+
+        li {
+            margin-bottom: .5em;
+        }
 
         @media screen and (max-width: $breakpoint-phone) {
             font-size: 16px;

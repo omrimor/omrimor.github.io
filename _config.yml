@@ -6,7 +6,7 @@ url: 'http://localhost:4000'
 paginate: 10
 
 permalink: none
-highlighter: pygments
+highlighter: rouge
 exclude: [node_modules, Gruntfile.js, package.json, README.md, .gitignore, .jshintrc]
 
 sass:
